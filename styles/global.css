@@ -1,4 +1,9 @@
 @tailwind base;
+
+.btn {
+  @apply text-white px-12 py-4 ml-4 bg-primary-Default rounded-xl transition-colors duration-300 hover:bg-primary-Hover;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -62,7 +67,6 @@ h6 {
 }
 
 .body1 {
-  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1px;
@@ -110,4 +114,15 @@ h6 {
 
 .sideBarShadow {
   box-shadow: 4px 0px 16px rgba(16, 30, 115, 0.08);
+}
+
+.bg-banner {
+  background-image: url('/images/homeBanner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hostelPanel::-webkit-scrollbar {
+  visibility: hidden;
 }
