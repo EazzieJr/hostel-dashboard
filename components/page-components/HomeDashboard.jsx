@@ -1,10 +1,12 @@
 import { Search, ArrowDown, MapOutline } from '../SVGIcons'
+import RatedHostelCard from '../Hostels'
+import PopularHostelCard from '../PopularHostelCard.jsx'
 
 const HomeDashboard = () => {
   return (
     <div className="flex space-x-[30px]">
       {/* Main section */}
-      <section className="w-9/12">
+      <section className="w-8/12">
         {/* Banner */}
         <div className="bg-banner rounded-[32px] px-[30px] space-y-8 py-[32px]">
           <h4 className="text-white">
@@ -33,15 +35,35 @@ const HomeDashboard = () => {
             </div>
 
             {/* button */}
-            <button className="btn">
-              Search
-            </button>
+            <button className="btn">Search</button>
           </div>
+        </div>
+
+        {/* Most Rated Hostels */}
+        <div className="my-8 space-y-4 overflow-x-hidden">
+          <div className="flex items-center justify-between">
+            <h5>Most Rated Hostels</h5>
+            <button className="text-primary-Default body2">View all</button>
+          </div>
+
+          {/* Rated hostels panel */}
+          <RatedHostelCard />
+        </div>
+
+        {/* Popular Hostels panel */}
+        <div className="my-8 space-y-4">
+          <div className="flex items-center justify-between">
+            <h5>Popular Hostels</h5>
+            <button className="text-primary-Default body2">View all</button>
+          </div>
+
+          {/* Rated hostels panel */}
+          <PopularHostelCard />
         </div>
       </section>
 
       {/* Aside secction */}
-      <aside className="w-3/12">rr</aside>
+      <aside className="w-4/12">rr</aside>
     </div>
   )
 }
