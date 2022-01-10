@@ -6,7 +6,7 @@ import PopularHostelCard from '../PopularHostelCard.jsx'
 import { Search, Settings, MapOutline, Edit, Cancel } from '../SVGIcons'
 
 const HomeDashboard = () => {
-  const [profiePanelShown, setProfilePanelShown] = useState(true)
+  const [profiePanelShown, setProfilePanelShown] = useState(false)
   const [editable, setEditable] = useState(false)
 
   const BackdropRef = useRef(null)
