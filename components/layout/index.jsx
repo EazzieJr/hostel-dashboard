@@ -2,7 +2,7 @@ import SideBar from './SideBar.jsx'
 
 const index = ({ children }) => {
   return (
-    <div className="flex bg-primary-Lightest">
+    <div className="flex">
       <SideBar />
       {children}
     </div>
