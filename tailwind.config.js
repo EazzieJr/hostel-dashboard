@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width:{
+        'w-1/10':"12%"
+      },
       colors: {
         primary: {
           Lightest: '#E8FFF6',
