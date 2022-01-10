@@ -1,7 +1,17 @@
 import React from 'react'
+import Head from 'next/head'
+
+// import HomeDashboard from '../src/components/page-components/HomeDashboard.jsx'
+import Layout from '../components/layout/index'
 
 const IndexPage = () => (
-  <h1 className="text-3xl font-bold underline text-red-700">Welcome to hotel dashboard!</h1>
+  <div>
+    <Head>
+      <title>Home | Hostel</title>
+    </Head>
+
+    <Layout>What the fuck</Layout>
+  </div>
 )
 
 export default IndexPage
