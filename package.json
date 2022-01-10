@@ -1,9 +1,4 @@
 {
-  "babelMacros": {
-    "twin": {
-      "preset": "emotion"
-    }
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",
