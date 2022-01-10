@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // import HomeDashboard from '../src/components/page-components/HomeDashboard.jsx'
+import NotificationDashboard from '../components/page-components/NotificationDashboard'
 import Layout from '../components/layout/index'
 
 const Notification = () => (
@@ -10,7 +11,9 @@ const Notification = () => (
       <title>Notification | Hostel</title>
     </Head>
 
-    <Layout>What the fuck</Layout>
+    <Layout>
+      <NotificationDashboard/>
+    </Layout>
   </div>
 )
 
