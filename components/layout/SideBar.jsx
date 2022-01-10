@@ -35,7 +35,7 @@ const SideBar = () => {
   }
 
   return (
-    <nav className="w-[236px] bg-white h-screen sideBarShadow fixed top-0 left-0 xl:py-9">
+    <nav className="w-[236px] bg-white h-screen sideBarShadow fixed top-0 left-0 xl:py-10">
       {/* Logo */}
       <div className="px-8">
         <Logo />

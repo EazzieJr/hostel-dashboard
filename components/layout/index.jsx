@@ -4,7 +4,7 @@ const index = ({ children }) => {
   return (
     <div className="flex">
       <SideBar />
-      {children}
+      <main className="xl:ml-[236px] xl:p-10">{children}</main>
     </div>
   )
 }
