@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import HomeDashboard from '../src/components/page-components/HomeDashboard.jsx'
+import HomeDashboard from '../components/page-components/HomeDashboard'
 import Layout from '../components/layout/index'
 
 const IndexPage = () => (
