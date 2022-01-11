@@ -19,7 +19,7 @@ const index = ({ children }) => {
           <Hamburger />
         </button>
       </nav>
-      <div className="lg:flex">
+      <div className="">
         <SideBar
           sideBarOpened={sideBarOpened}
           setSideBarOpened={setSideBarOpened}
