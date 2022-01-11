@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
-// import HomeDashboard from '../src/components/page-components/HomeDashboard.jsx'
+
+import PaymentDashboard from '../components/page-components/PaymentDashboard'
 import Layout from '../components/layout/index'
 
 const Payments = () => (
@@ -10,7 +11,10 @@ const Payments = () => (
       <title>Payments | Hostel</title>
     </Head>
 
-    <Layout>What the fuck</Layout>
+    <Layout>
+      <PaymentDashboard/>
+
+    </Layout>
   </div>
 )
 

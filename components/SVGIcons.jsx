@@ -151,3 +151,28 @@ export const ArrowDown = () => {
     </svg>
   )
 }
+export const CircleIntersect = () =>{
+  return(
+    <svg width="50" height="33" viewBox="0 0 50 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle opacity="0.4" cx="16.9047" cy="16.4052" r="16.4047" fill="white"/>
+      <circle opacity="0.4" cx="33.3109" cy="16.4047" r="16.4047" fill="white"/>
+    </svg>
+  )
+}
+
+export const Edit = () =>{
+  return(
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.5 8.22997V9.74997C0.5 9.88997 0.61 9.99997 0.75 9.99997H2.27C2.335 9.99997 2.4 9.97497 2.445 9.92497L7.905 4.46997L6.03 2.59497L0.575 8.04997C0.525 8.09997 0.5 8.15997 0.5 8.22997ZM9.355 3.01997C9.55 2.82497 9.55 2.50997 9.355 2.31497L8.185 1.14497C7.99 0.949968 7.675 0.949968 7.48 1.14497L6.565 2.05997L8.44 3.93497L9.355 3.01997Z" fill="#2D3748"/>
+    </svg>
+  )
+}
+
+export const MasterCardCircle = () =>{
+  return(
+    <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6.63158" cy="7.49999" r="6.63158" fill="#EB001B"/>
+      <circle cx="14.3689" cy="7.49999" r="6.63158" fill="#F79E1B"/>
+    </svg>
+  )
+}
