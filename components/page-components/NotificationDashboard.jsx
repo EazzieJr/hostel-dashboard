@@ -1,5 +1,4 @@
 import { Read,Archive,Cancel } from "../SVGIcons";
-
 const notifications = [
     {
         image:"/images/unsplash_1OtUkD_8svc.png",
