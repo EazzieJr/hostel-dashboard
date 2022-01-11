@@ -178,3 +178,33 @@ export const Edit = () => {
     </svg>
   )
 }
+
+export const Star = () => {
+  return (
+    <svg
+      width="20"
+      height="19"
+      viewBox="0 0 20 19"
+    >
+      <path
+        d="M9.99999 15L4.12199 18.59L5.71999 11.89L0.48999 7.41L7.35499 6.86L9.99999 0.5L12.645 6.86L19.511 7.41L14.28 11.89L15.878 18.59L9.99999 15Z"
+      />
+    </svg>
+  )
+}
+
+export const ArrowLeft = () => {
+  return (
+    <svg
+      width="8"
+      height="14"
+      viewBox="0 0 8 14"
+      fill="none"
+    >
+      <path
+        d="M2.828 7L7.778 11.95L6.364 13.364L0 7L6.364 0.636002L7.778 2.05L2.828 7Z"
+        fill="white"
+      />
+    </svg>
+  )
+}

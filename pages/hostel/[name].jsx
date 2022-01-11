@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout/index'
-import { MapOutline } from '../../components/SVGIcons'
+import { ArrowLeft, MapOutline, Star } from '../../components/SVGIcons'
 
 const Hostel = () => {
   const { query } = useRouter()
@@ -13,7 +13,9 @@ const Hostel = () => {
       </Head>
 
       <nav className="flex items-center space-x-3">
-        <button className="bg-primary-Default text-white p-4 rounded-full"></button>
+        <button className="btn p-0 bg-primary-Default text-white h-10 w-10 flex items-center justify-center rounded-full">
+          <ArrowLeft />
+        </button>
         <h3 className="text-primary-Default">Favorites</h3>
       </nav>
 
@@ -99,12 +101,66 @@ const Hostel = () => {
                 <HostelFeatures label="Quiet Environment" />
               </div>
 
-              <button className='subtitle1 text-primary-Default'>See all reviews</button>
+              <button className="subtitle1 text-primary-Default">
+                See all reviews
+              </button>
             </div>
           </div>
         </div>
 
-        <aside className="w-5/12">icijd</aside>
+        <aside className="w-5/12">
+          {/* map */}
+          <div className="relative rounded-[32px] h-[248px] overflow-hidden">
+            <div className="w-full bg-gray-200 "></div>
+            <div className="absolute top-0 bg-black bg-opacity-60 h-full w-full flex items-center justify-center flex-col">
+              <button className="btn rounded-full">See on map</button>
+            </div>
+          </div>
+
+          {/* rating */}
+          <div className="flex items-center space-x-2 mt-6">
+            <i className="fill-current text-yellow-Dark">
+              <Star />
+            </i>
+            <i className="fill-current text-yellow-Dark">
+              <Star />
+            </i>
+            <i className="fill-current text-yellow-Dark">
+              <Star />
+            </i>
+            <i className="fill-current text-yellow-Dark">
+              <Star />
+            </i>
+            <i className="fill-current text-Neutral-gray">
+              <Star />
+            </i>
+          </div>
+
+          {/* About */}
+          <div className="mt-9">
+            <p className="subtitle1">About</p>
+            <p className="body1 mt-2">
+              This is the hostel caption, it is fully customizable and any
+              hostel owner can set this to whatever they want
+            </p>
+          </div>
+
+          {/* Reviews */}
+          <div className="mt-9">
+            <p className="subtitle1">Reviews</p>
+            <div className="space-y-5">
+              <Reviews review="Best customer service!" date="December 2020" />
+              <Reviews
+                review="The hostel is super easy to access!"
+                date="November 2020"
+              />
+            </div>
+          </div>
+
+          <button className="subtitle1 text-primary-Default mt-2">
+            See all reviews
+          </button>
+        </aside>
       </div>
     </Layout>
   )
@@ -115,6 +171,15 @@ const HostelFeatures = ({ label }) => {
     <div className="flex items-center space-x-2">
       <div className="w-2.5 h-2.5 rounded-full bg-primary-Default"></div>
       <p className="body2">{label}</p>
+    </div>
+  )
+}
+
+const Reviews = ({ review, date }) => {
+  return (
+    <div>
+      <p className="body1 mt-2">"{review}"</p>
+      <p className="small1 text-Neutral-gray mt-1">{date}</p>
     </div>
   )
 }
