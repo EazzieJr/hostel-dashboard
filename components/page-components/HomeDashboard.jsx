@@ -13,25 +13,27 @@ const HomeDashboard = () => {
 
   const FormLabel = ({ label, placeholder, type }) => {
     return (
-      <label htmlFor="firstName body2">
-        {label}
-        {/* input */}
-        <div className="mt-2 border-2 border-[#E2E8F0] border-opacity-60 rounded-[15px] bg-white flex items-center py-4 px-5">
-          <input
-            disabled={!editable}
-            className="block w-full focus:outline-none"
-            type={type}
-            name="firstName"
-            placeholder={placeholder}
-          />
-          <button
-            className="p-2 hover:bg-Neutral-Lightest rounded-full"
-            onClick={() => setEditable(!editable)}
-          >
-            <EditInput />
-          </button>
-        </div>
-      </label>
+      <>
+        <label htmlFor="firstName body2">
+          {label}
+          {/* input */}
+          <div className="mt-2 border-2 border-[#E2E8F0] border-opacity-60 rounded-[15px] bg-white flex items-center py-4 px-5">
+            <input
+              disabled={!editable}
+              className="block w-full focus:outline-none"
+              type={type}
+              name="firstName"
+              placeholder={placeholder}
+            />
+            <button
+              className="p-2 hover:bg-Neutral-Lightest rounded-full"
+              onClick={() => setEditable(!editable)}
+            >
+              <EditInput />
+            </button>
+          </div>
+        </label>
+      </>
     )
   }
 
