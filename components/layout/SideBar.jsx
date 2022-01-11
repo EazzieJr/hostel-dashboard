@@ -50,7 +50,7 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
       <nav
         className={`${
           sideBarOpened ? 'translate-x-0' : '-translate-x-full'
-        } transform w-[236px] transition-transform bg-white h-screen h-[100%] sideBarShadow fixed top-0 py-10 z-40`}
+        } transform xl:transform-none w-[236px] transition-transform bg-white h-screen h-[100%] sideBarShadow fixed top-0 py-10 z-40`}
       >
         {/* Logo */}
         <div className="px-8">
