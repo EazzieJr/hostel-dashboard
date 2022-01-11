@@ -6,10 +6,10 @@ import SideBar from './SideBar.jsx'
 const index = ({ children }) => {
   const [sideBarOpened, setSideBarOpened] = useState(false)
   return (
-    <div className="container mx-auto max-w-screen-2xl relative">
-      <nav className="xl:hidden px-4 pt-4 md:px-10 md:pt-6 flex justify-between items-center">
-        <div className="lg:hidden flex items-center space-x-2">
-          <div className="h-6 w-6 relative">
+    <div className="">
+      <nav className="flex items-center justify-between px-4 pt-4 xl:hidden md:px-10 md:pt-6">
+        <div className="flex items-center space-x-2 lg:hidden">
+          <div className="relative w-6 h-6">
             <Image src="/images/userPic.png" layout="fill" />
           </div>
 
