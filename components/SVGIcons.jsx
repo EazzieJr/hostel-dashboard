@@ -170,9 +170,27 @@ export const ArrowDown = () => {
 
 export const CircleIntersect = () => {
   return (
-    <svg width="50" height="33" viewBox="0 0 50 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle opacity="0.4" cx="16.9047" cy="16.4052" r="16.4047" fill="white" />
-      <circle opacity="0.4" cx="33.3109" cy="16.4047" r="16.4047" fill="white" />
+    <svg
+      width="50"
+      height="33"
+      viewBox="0 0 50 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        opacity="0.4"
+        cx="16.9047"
+        cy="16.4052"
+        r="16.4047"
+        fill="white"
+      />
+      <circle
+        opacity="0.4"
+        cx="33.3109"
+        cy="16.4047"
+        r="16.4047"
+        fill="white"
+      />
     </svg>
   )
 }
@@ -188,45 +206,49 @@ export const EditInput = () => {
   )
 }
 
-export const Edit = () =>{
-  return(
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.5 8.22997V9.74997C0.5 9.88997 0.61 9.99997 0.75 9.99997H2.27C2.335 9.99997 2.4 9.97497 2.445 9.92497L7.905 4.46997L6.03 2.59497L0.575 8.04997C0.525 8.09997 0.5 8.15997 0.5 8.22997ZM9.355 3.01997C9.55 2.82497 9.55 2.50997 9.355 2.31497L8.185 1.14497C7.99 0.949968 7.675 0.949968 7.48 1.14497L6.565 2.05997L8.44 3.93497L9.355 3.01997Z" fill="#2D3748"/>
-</svg>
-  )
-}
-
-export const Star = () => {
+export const Edit = () => {
   return (
     <svg
-      width="20"
-      height="19"
-      viewBox="0 0 20 19"
+      width="10"
+      height="10"
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M9.99999 15L4.12199 18.59L5.71999 11.89L0.48999 7.41L7.35499 6.86L9.99999 0.5L12.645 6.86L19.511 7.41L14.28 11.89L15.878 18.59L9.99999 15Z"
+        d="M0.5 8.22997V9.74997C0.5 9.88997 0.61 9.99997 0.75 9.99997H2.27C2.335 9.99997 2.4 9.97497 2.445 9.92497L7.905 4.46997L6.03 2.59497L0.575 8.04997C0.525 8.09997 0.5 8.15997 0.5 8.22997ZM9.355 3.01997C9.55 2.82497 9.55 2.50997 9.355 2.31497L8.185 1.14497C7.99 0.949968 7.675 0.949968 7.48 1.14497L6.565 2.05997L8.44 3.93497L9.355 3.01997Z"
+        fill="#2D3748"
       />
     </svg>
   )
 }
 
-export const MasterCardCircle = () =>{
-  return(
-    <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="6.63158" cy="7.49999" r="6.63158" fill="#EB001B"/>
-      <circle cx="14.3689" cy="7.49999" r="6.63158" fill="#F79E1B"/>
+export const Star = () => {
+  return (
+    <svg width="20" height="19" viewBox="0 0 20 19">
+      <path d="M9.99999 15L4.12199 18.59L5.71999 11.89L0.48999 7.41L7.35499 6.86L9.99999 0.5L12.645 6.86L19.511 7.41L14.28 11.89L15.878 18.59L9.99999 15Z" />
+    </svg>
+  )
+}
+
+export const MasterCardCircle = () => {
+  return (
+    <svg
+      width="21"
+      height="15"
+      viewBox="0 0 21 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="6.63158" cy="7.49999" r="6.63158" fill="#EB001B" />
+      <circle cx="14.3689" cy="7.49999" r="6.63158" fill="#F79E1B" />
     </svg>
   )
 }
 
 export const ArrowLeft = () => {
   return (
-    <svg
-      width="8"
-      height="14"
-      viewBox="0 0 8 14"
-      fill="none"
-    >
+    <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
       <path
         d="M2.828 7L7.778 11.95L6.364 13.364L0 7L6.364 0.636002L7.778 2.05L2.828 7Z"
         fill="white"
@@ -249,4 +271,12 @@ export const Calender = () =>{
       <path d="M15 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H1C0.734784 20 0.48043 19.8946 0.292893 19.7071C0.105357 19.5196 0 19.2652 0 19V3C0 2.73478 0.105357 2.48043 0.292893 2.29289C0.48043 2.10536 0.734784 2 1 2H5V0H7V2H13V0H15V2ZM2 8V18H18V8H2ZM4 10H6V12H4V10ZM9 10H11V12H9V10ZM14 10H16V12H14V10Z" fill="#25282B"/>
     </svg>
   )  
+}
+
+export const Hamburger = () => {
+  return (
+    <svg width="18" height="16" viewBox="0 0 18 16" fill="none">
+      <path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z" fill="#09121F" />
+    </svg>
+  )
 }

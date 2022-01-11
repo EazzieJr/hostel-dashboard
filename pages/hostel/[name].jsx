@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout/index'
 import { ArrowLeft, MapOutline, Star } from '../../components/SVGIcons'
@@ -13,16 +14,18 @@ const Hostel = () => {
       </Head>
 
       <nav className="flex items-center space-x-3">
-        <button className="btn p-0 bg-primary-Default text-white h-10 w-10 flex items-center justify-center rounded-full">
-          <ArrowLeft />
-        </button>
+        <Link href="/favorites">
+          <a className="btn ml-0 p-0 bg-primary-Default text-white h-6 w-6 md:h-10 md:w-10 flex items-center justify-center rounded-full">
+            <ArrowLeft />
+          </a>
+        </Link>
         <h3 className="text-primary-Default">Favorites</h3>
       </nav>
 
       <div className="mt-7 flex items-center justify-between">
         <div>
           <h3>{query.name}</h3>
-          <p className="body1 flex items-center space-x-3 my-3 text-Neutral-gray ">
+          <p className="body2 sm:body1 flex items-center space-x-3 my-3 text-Neutral-gray ">
             <MapOutline />
             <span> 819 Boyd Garden Nebraska Pitcairn Islands </span>
           </p>
@@ -30,18 +33,18 @@ const Hostel = () => {
 
         <div>
           <h4 className="text-right">130K</h4>
-          <button className="btn ml-0 mt-3 py-2 px-7 text-sm rounded-xl">
+          <button className="btn ml-0 mt-3 py-2 px-7 text-xs sm:text-sm rounded-lg sm:rounded-xl">
             Book Now
           </button>
         </div>
       </div>
 
       {/* Main */}
-      <div className="flex space-x-8 my-10">
-        <div className="w-7/12">
+      <div className="sm:flex sm:space-x-8 my-10">
+        <div className="sm:w-7/12">
           {/* picture gallery */}
           <div>
-            <div className="w-fill h-[333px] relative rounded-[32px] overflow-hidden">
+            <div className="w-fill h-40 sm:h-[333px] relative rounded-xl md:rounded-[32px] overflow-hidden">
               <Image
                 src="/images/unsplash_iqeG5xA96M4.png"
                 layout="fill"
@@ -51,7 +54,7 @@ const Hostel = () => {
             </div>
 
             <div className="flex items-center overflow-x-scroll mt-4 space-x-4 hostelPanel">
-              <div className="min-w-[160px] h-[137px] relative">
+              <div className="min-w-[120px] sm:min-w-[160px] h-28 sm:h-[137px] relative">
                 <Image
                   src="/images/unsplash_eDMQgYbKhiU.png"
                   layout="fill"
@@ -59,7 +62,7 @@ const Hostel = () => {
                   alt="wowo"
                 />
               </div>
-              <div className="min-w-[160px] h-[137px] relative">
+              <div className="min-w-[120px] sm:min-w-[160px] h-28 sm:h-[137px] relative">
                 <Image
                   src="/images/unsplash_koH7IVuwRLw.png"
                   layout="fill"
@@ -67,7 +70,7 @@ const Hostel = () => {
                   alt="wowo"
                 />
               </div>
-              <div className="min-w-[160px] h-[137px] relative">
+              <div className="min-w-[120px] sm:min-w-[160px] h-28 sm:h-[137px] relative">
                 <Image
                   src="/images/unsplash_jj3PpeBIlLA.png"
                   layout="fill"
@@ -75,7 +78,7 @@ const Hostel = () => {
                   alt="wowo"
                 />
               </div>
-              <div className="min-w-[160px] h-[137px] relative">
+              <div className="min-w-[120px] sm:min-w-[160px] h-28 sm:h-[137px] relative">
                 <Image
                   src="/images/unsplash_koH7IVuwRLw.png"
                   layout="fill"
@@ -108,12 +111,12 @@ const Hostel = () => {
           </div>
         </div>
 
-        <aside className="w-5/12">
+        <aside className="my-16 sm:my-0 sm:w-5/12">
           {/* map */}
-          <div className="relative rounded-[32px] h-[248px] overflow-hidden">
+          <div className="relative rounded-xl md:rounded-[32px] h-[248px] overflow-hidden">
             <div className="w-full bg-gray-200 "></div>
             <div className="absolute top-0 bg-black bg-opacity-60 h-full w-full flex items-center justify-center flex-col">
-              <button className="btn rounded-full">See on map</button>
+              <button className="btn ml-0 rounded-full text-xs sm:text-base">See on map</button>
             </div>
           </div>
 
@@ -157,7 +160,7 @@ const Hostel = () => {
             </div>
           </div>
 
-          <button className="subtitle1 text-primary-Default mt-2">
+          <button className="subtitle1 text-primary-Default mt-4 sm:mt-2">
             See all reviews
           </button>
         </aside>

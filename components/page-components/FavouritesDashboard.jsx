@@ -4,23 +4,24 @@ import RatedHostelCard from '../Hostels'
 const FavouritesDashboard = () => {
   return (
     <div>
-      <nav className="flex items-center justify-between">
+      <nav className="md:flex items-center justify-between">
         <h3 className="text-primary-Default">Favorites</h3>
 
         <div className="flex items-center">
           {/* search box */}
-          <div className="flex bg-white px-5 py-3.5 rounded-[16px] space-x-4 w-[340px]">
+          <div className="w-full flex bg-white px-3 sm:px-5 py-2 sm:py-3.5 rounded-lg sm:rounded-[16px] space-x-4 xl:w-[340px]">
             <Search />
             <input
               type="text"
               name="search"
               placeholder="Search hostels"
-              className="bg-transparent focus:outline-none text-Neutral-Dark w-full body1"
+              className="bg-transparent focus:outline-none text-Neutral-Dark w-full small1 sm:body1"
             />
-
-            {/* button */}
           </div>
-          <button className="btn">Search</button>
+          {/* button */}
+          <button className="btn py-3 px-6 rounded-lg small1 sm:body1">
+            Search
+          </button>
         </div>
       </nav>
 
