@@ -1,7 +1,7 @@
 @tailwind base;
 
 .btn {
-  @apply text-white px-12 py-4 ml-4 bg-primary-Default rounded-xl transition-colors duration-300 hover:bg-primary-Hover;
+  @apply text-white px-12 py-4 ml-4 bg-primary-Default sm:rounded-xl transition-colors duration-300 hover:bg-primary-Hover;
 }
 
 @tailwind components;
@@ -126,4 +126,43 @@ h6 {
 
 .hostelPanel::-webkit-scrollbar {
   visibility: hidden;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+  font-size: 44px;
+  line-height: 60px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 46px;
+  letter-spacing: 0.2px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0.2px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
 }
