@@ -36,9 +36,9 @@ const hostels = [
 const PopularHostelCard = () => {
   return (
     <div className="grid grid-cols-2 gap-6">
-      {hostels.slice(0, 4).map(({ name, location, img, price, favorite }) => {
+      {hostels.slice(0, 4).map(({ name, location, img, price, favorite }, index) => {
         return (
-          <div className="flex gap-y-6 p-4 min-w-[350px] bg-white rounded-3xl space-x-4">
+          <div key= {index} className="flex gap-y-6 p-4 min-w-[350px] bg-white rounded-3xl space-x-4">
             <div className="relative min-w-[80px] min-h-[80px] rounded-xl overflow-hidden">
               <Image
                 src={img}

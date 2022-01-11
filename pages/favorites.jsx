@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-// import HomeDashboard from '../src/components/page-components/HomeDashboard.jsx'
+import FavouritesDashboard from '../components/page-components/FavouritesDashboard.jsx'
 import Layout from '../components/layout/index'
 
 const Favorites = () => (
@@ -10,7 +10,9 @@ const Favorites = () => (
       <title>Favorites | Hostel</title>
     </Head>
 
-    <Layout>What the fuck</Layout>
+    <Layout>
+      <FavouritesDashboard />
+    </Layout>
   </div>
 )
 

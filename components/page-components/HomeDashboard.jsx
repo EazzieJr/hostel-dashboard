@@ -1,9 +1,53 @@
-import { Search, Settings, MapOutline } from '../SVGIcons'
-import RatedHostelCard from '../Hostels'
-import PopularHostelCard from '../PopularHostelCard.jsx'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 
+import RatedHostelCard from '../Hostels'
+import PopularHostelCard from '../PopularHostelCard.jsx'
+import { Search, Settings, MapOutline, EditInput, Cancel } from '../SVGIcons'
+
 const HomeDashboard = () => {
+  const [profiePanelShown, setProfilePanelShown] = useState(false)
+  const [editable, setEditable] = useState(false)
+
+  const BackdropRef = useRef(null)
+
+  const FormLabel = ({ label, placeholder, type }) => {
+    return (
+      <label htmlFor="firstName body2">
+        {label}
+        {/* input */}
+        <div className="mt-2 border-2 border-[#E2E8F0] border-opacity-60 rounded-[15px] bg-white flex items-center py-4 px-5">
+          <input
+            disabled={!editable}
+            className="block w-full focus:outline-none"
+            type={type}
+            name="firstName"
+            placeholder={placeholder}
+          />
+          <button
+            className="p-2 hover:bg-Neutral-Lightest rounded-full"
+            onClick={() => setEditable(!editable)}
+          >
+            <EditInput />
+          </button>
+        </div>
+      </label>
+    )
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    setProfilePanelShown(false)
+  }
+
+  const handleBackClick = e => {
+    const backdrop = BackdropRef.current
+    if (backdrop === e.target) {
+      setProfilePanelShown(false)
+    }
+  }
+
   return (
     <div className="flex space-x-[30px]">
       {/* Main section */}
@@ -80,7 +124,10 @@ const HomeDashboard = () => {
             </div>
           </div>
 
-          <button className="flex items-center space-x-5 fill-current py-3.5 rounded-lg mt-[30px] justify-center w-full text-Neutral-gray hover:bg-Neutral-Lightest transition-colors duration-300">
+          <button
+            onClick={() => setProfilePanelShown(true)}
+            className="flex items-center space-x-5 fill-current py-3.5 rounded-lg mt-[30px] justify-center w-full text-Neutral-gray hover:bg-Neutral-Lightest transition-colors duration-300"
+          >
             <Settings />
             <span>Customize/Manage your Profile</span>
           </button>
@@ -140,6 +187,88 @@ const HomeDashboard = () => {
           </div>
         </div>
       </aside>
+
+      {/* Profile panel */}
+      {profiePanelShown && (
+        <div
+          ref={BackdropRef}
+          onClick={handleBackClick}
+          className="fixed bg-black bg-opacity-30 h-screen w-screen top-0 -left-8 flex items-center justify-center"
+        >
+          <div className="max-w-[599px] w-[599px] rounded-[32px] py-10 px-8 bg-[#F8F9FA]">
+            {/* Header */}
+            <div className="flex items-center justify-between">
+              <h5 className="text-primary-Default">Manage Profile</h5>
+
+              <button
+                onClick={() => setProfilePanelShown(false)}
+                className="fill-current text-Neutral-black rounded-full bg-Neutral-Divider p-4"
+              >
+                <Cancel />
+              </button>
+            </div>
+
+            {/* Profile */}
+            {/* Image */}
+            <div className="relative w-[80px] h-[80px] rounded-full mt-8">
+              <Image src="/images/userPic.png" layout="fill" alt="User" />
+            </div>
+
+            {/* form */}
+            <form className="mt-6 grid grid-cols-2 gap-x-4 gap-y-6">
+              <FormLabel
+                label="First Name"
+                placeholder="Cedric Weimann"
+                type="text"
+              />
+              <FormLabel
+                label="Last Name"
+                placeholder="Cedric Weimann"
+                type="text"
+              />
+              <FormLabel
+                label="Email"
+                placeholder="Cedric@gmail.comm"
+                type="email"
+                First
+                Name
+              />
+              <FormLabel
+                label="Phone no."
+                placeholder="2828282828"
+                type="text"
+              />
+              <div className="col-span-2">
+                <FormLabel
+                  label="Address"
+                  placeholder="Cedric Weimann"
+                  type="text"
+                />
+              </div>
+              <FormLabel
+                label="City"
+                placeholder="Cedric Weimann"
+                type="text"
+              />
+              <FormLabel
+                label="State"
+                placeholder="Cedric Weimann"
+                type="text"
+              />
+
+              <div>
+                <button
+                  onClick={handleSubmit}
+                  type="submit"
+                  className="btn ml-0"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
