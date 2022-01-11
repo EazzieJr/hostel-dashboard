@@ -10,8 +10,16 @@ import {
   Settings,
   Payment,
   Help,
+  Overview,
+  Receipts,
   Logout,
 } from '../SVGIcons'
+
+const user = {
+  name: 'Joey',
+  image: '/images/userPic.png',
+  role: 'Client',
+}
 
 const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
   const { asPath } = useRouter()
@@ -64,15 +72,48 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
         {/* Nav list */}
         <ul className="mt-14">
           <div className="px-6">
-            <NavItem label="Home" logo={<Home />} link="/" />
-            <NavItem label="Favorites" logo={<Favorites />} link="/favorites" />
+            {user.role === 'Client' && (
+              <NavItem label="Overview" logo={<Overview />} link="/overview" />
+            )}
+
+            {/* home */}
+            {user.role === 'Student' && (
+              <NavItem label="Home" logo={<Home />} link="/" />
+            )}
+
+            {/* favorites */}
+            {user.role === 'Student' && (
+              <NavItem
+                label="Favorites"
+                logo={<Favorites />}
+                link="/favorites"
+              />
+            )}
+
+            {/* my hostel */}
+            {user.role === 'Client' && (
+              <NavItem
+                label="My Hostel"
+                logo={<Favorites />}
+                link="/myHostel"
+              />
+            )}
+
             <NavItem
               label="Notification"
               logo={<Notification />}
               link="/notification"
             />
+
             <NavItem label="Settings" logo={<Settings />} link="/settings" />
-            <NavItem label="Payments" logo={<Payment />} link="/payments" />
+
+            {user.role === 'Student' && (
+              <NavItem label="Payments" logo={<Payment />} link="/payments" />
+            )}
+
+            {user.role === 'Client' && (
+              <NavItem label="Receipts" logo={<Receipts />} link="/receipts" />
+            )}
           </div>
 
           {/* divider */}
@@ -85,6 +126,7 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
         </ul>
       </nav>
 
+      {/* backdrop */}
       {sideBarOpened && (
         <div
           onClick={handleOnBlurClick}
