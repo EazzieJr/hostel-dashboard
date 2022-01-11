@@ -168,14 +168,14 @@ export const ArrowDown = () => {
   )
 }
 
-export const CircleIntersect = () =>{
-  return(
+export const CircleIntersect = () => {
+  return (
     <svg width="50" height="33" viewBox="0 0 50 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle opacity="0.4" cx="16.9047" cy="16.4052" r="16.4047" fill="white"/>
-      <circle opacity="0.4" cx="33.3109" cy="16.4047" r="16.4047" fill="white"/>
-</svg>
-    }
-)
+      <circle opacity="0.4" cx="16.9047" cy="16.4052" r="16.4047" fill="white" />
+      <circle opacity="0.4" cx="33.3109" cy="16.4047" r="16.4047" fill="white" />
+    </svg>
+  )
+}
 
 export const EditInput = () => {
   return (

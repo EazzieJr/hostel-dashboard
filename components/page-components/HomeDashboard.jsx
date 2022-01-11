@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import RatedHostelCard from '../Hostels'
 import PopularHostelCard from '../PopularHostelCard.jsx'
-import { Search, Settings, MapOutline, Edit, Cancel } from '../SVGIcons'
+import { Search, Settings, MapOutline, EditInput, Cancel } from '../SVGIcons'
 
 const HomeDashboard = () => {
   const [profiePanelShown, setProfilePanelShown] = useState(false)
@@ -28,7 +28,7 @@ const HomeDashboard = () => {
             className="p-2 hover:bg-Neutral-Lightest rounded-full"
             onClick={() => setEditable(!editable)}
           >
-            <Edit />
+            <EditInput />
           </button>
         </div>
       </label>
