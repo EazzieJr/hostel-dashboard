@@ -47,7 +47,7 @@ const NotificationDashboard = () => {
                     notifications.map(notification =>{
                         return(
                             <div className="flex justify-between items-center py-4 rounded-lg mb-4 bg-primary-Lightest">
-                                <div className="flex items-center justify-between w-1/2 gap-x-2">
+                                <div className="flex items-center w-1/2 gap-x-3">
                                     <img className="pl-2" src={notification.image}/>
                                     <div>
                                         <p className="subtitle1">Hostel Support</p>

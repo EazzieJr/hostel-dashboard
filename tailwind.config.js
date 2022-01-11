@@ -5,8 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'card-background':"url('/Images/CardBackground.png')"
+      },
       width:{
-        'w-1/10':"12%"
+        'w-1/10':"12%",
+        'w-9/10':"95%",
+        'w-4/10':"45%"
       },
       colors: {
         primary: {
