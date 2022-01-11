@@ -6,7 +6,7 @@ const CardSection = () => {
         <div className="flex w-1/2 px-4">
             <div className="w-full">
                 <h3 className="text-primary-Default ">Settings</h3>
-                <div className="w-11/12 rounded-3xl py-4 my-6 px-5 flex flex-col text-white gap-y-16 bg-card-background">
+                <div className="w-11/12   py-4 my-6 px-5 flex flex-col text-white gap-y-16 bg-primary-Default rounded-xl relative ">
                     <div className="flex items-center justify-between">
                         <p className="subtitle1">Hostel UI</p>
                         <div>
