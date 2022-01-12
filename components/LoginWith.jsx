@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Apple, Facebook, Google } from './SVGIcons'
+import { Apple, Facebook, LogoWhite, Google } from './SVGIcons'
 import Link from 'next/link'
 
 const inputs = [
@@ -51,7 +51,15 @@ const LoginWith = () => {
 
             <div className="social-medias-container flex space-x-5 mt-5">
               <button className="social-media p-4 border rounded-xl">
+                <Apple />
+              </button>
+
+              <button className="social-media p-4 border rounded-xl">
                 <Facebook />
+              </button>
+
+              <button className="social-media p-4 border rounded-xl">
+                <Google />
               </button>
             </div>
 
@@ -102,11 +110,13 @@ const LoginWith = () => {
             </Link>
 
             <div className="already-have-an-account mt-5">
-            <p className="text-xs text-[#A0AEC0]">
-                Don't have an account?
+              <p className="text-xs text-[#A0AEC0] flex space-x-1">
+                <span>Don't have an account?</span>
                 <Link href="/register">
-                  <a >
-                    <p className="cursor-pointer text-[#03A86B] font-medium">Register</p>
+                  <a>
+                    <p className="cursor-pointer text-[#03A86B] font-medium">
+                      Register
+                    </p>
                   </a>
                 </Link>
               </p>
@@ -114,11 +124,7 @@ const LoginWith = () => {
           </form>
 
           <div className="splash-container hidden lg:flex flex-col justify-center items-center text-center space-y-5 md:space-y-7">
-            <img className="w-24 xl:w-32" src="/svg/logo.svg" alt="" />
-
-            <p className="hostel text-4xl xl:text-5xl font-bold font-mono text-white text-center">
-              Hostels
-            </p>
+            <LogoWhite />
           </div>
         </div>
 
@@ -133,7 +139,15 @@ const LoginWith = () => {
 
             <div className="social-medias-container flex space-x-5 mt-5">
               <button className="social-media p-4 border rounded-xl">
+                <Apple />
+              </button>
+
+              <button className="social-media p-4 border rounded-xl">
                 <Facebook />
+              </button>
+
+              <button className="social-media p-4 border rounded-xl">
+                <Google />
               </button>
             </div>
 
@@ -184,11 +198,13 @@ const LoginWith = () => {
             </Link>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0]">
-                Don't have an account?
+              <p className="text-xs text-[#A0AEC0] flex space-x-1">
+                <span>Don't have an account?</span>
                 <Link href="/register">
-                  <a >
-                    <p className="cursor-pointer text-[#03A86B] font-medium">Register</p>
+                  <a>
+                    <p className="cursor-pointer text-[#03A86B] font-medium">
+                      Register
+                    </p>
                   </a>
                 </Link>
               </p>

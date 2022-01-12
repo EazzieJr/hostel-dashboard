@@ -8,7 +8,7 @@ const hostels = [
     price: '5,000',
     location: 'Unilorin',
     favorite: true,
-    img: '/images/hostelImage.png',
+    img: '/images/hostelImage.png'
   },
   {
     name: 'Best Place Hostel',
@@ -47,11 +47,13 @@ const Hostel = () => {
                   key={index}
                   className="flex flex-col gap-y-6 p-4 lg:min-w-[200px] w-[250px] sm:w-[230px] xl:min-w-[255px] xl:w-[255px] bg-white rounded-3xl"
                 >
-                  <div classuName="relative rounded-3xl overflow-hidden h-[150px]">
+                  <div className="relative rounded-3xl overflow-hidden h-[150px]">
                     <Image
                       src={img}
                       alt="hostelimage"
                       layout="fill"
+                      // width={400}
+                      // height={23}
                       objectFit="cover"
                     />
                   </div>
