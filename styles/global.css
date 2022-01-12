@@ -55,14 +55,16 @@ h6 {
 
 .subtitle1 {
   font-weight: bold;
-  font-size: 16px;
+  @apply text-xs;
+  @apply lg:text-sm;
   line-height: 24px;
   letter-spacing: 0.1px;
 }
 
 .subtitle2 {
   font-weight: bold;
-  font-size: 14px;
+  @apply text-xs;
+  @apply lg:text-sm;
   line-height: 20px;
   letter-spacing: 0.1px;
 }
@@ -74,7 +76,8 @@ h6 {
 }
 
 .body2 {
-  font-size: 14px;
+  @apply text-xs;
+  @apply lg:text-sm;
   line-height: 20px;
   letter-spacing: 0.1px;
 }
@@ -118,10 +121,15 @@ h6 {
 }
 
 .bg-banner {
-  backgroundImage: url('/images/homeBanner.png');
+  background-image: url('/images/homeBanner.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .hostelPanel::-webkit-scrollbar {
@@ -155,7 +163,7 @@ h6 {
 
   h5 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26px;
     letter-spacing: 0.2px;
   }
