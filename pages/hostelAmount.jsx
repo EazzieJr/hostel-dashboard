@@ -9,7 +9,7 @@ const HostelAmount = () => {
       <section class="login flex justify-center bg-[#F8F9FA]">
         <div
           class="login-container w-screen lg:w-[45%] h-screen bg-center bg-cover bg-no-repeat lg:flex flex-col justify-center items-center space-y-5"
-          style={{ 'background-image': 'url(/images/Splash-bg.png)' }}
+          style={{ 'backgroundImage': 'url(/images/Splash-bg.png)' }}
         >
           <Navigation />
           <div class="info py-10 space-y-4">

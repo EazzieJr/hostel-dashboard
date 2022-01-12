@@ -20,7 +20,7 @@ const AccountType = () => {
       <section class="login flex justify-center bg-[#F8F9FA]">
         <div
           class="login-container w-screen lg:w-2/5 h-screen flex flex-col justify-center items-center bg-center bg-cover bg-no-repeat space-y-5"
-          style={{ 'background-image': 'url(/images/Splash-bg.png)' }}
+          style={{ 'backgroundImage': 'url(/images/Splash-bg.png)' }}
         >
           <form
             class="w-80 lg:w-[400px] sm:w-96 lg:hidden px-8 py-8 bg-white rounded-2xl shadow-xl"

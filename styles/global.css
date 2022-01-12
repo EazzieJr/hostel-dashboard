@@ -118,7 +118,7 @@ h6 {
 }
 
 .bg-banner {
-  background-image: url('/images/homeBanner.png');
+  backgroundImage: url('/images/homeBanner.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
