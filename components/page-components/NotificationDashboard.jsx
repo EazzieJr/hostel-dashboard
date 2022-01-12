@@ -1,4 +1,5 @@
 import { Read,Archive,Cancel } from "../SVGIcons";
+
 const notifications = [
     {
         image:"/images/unsplash_1OtUkD_8svc.png",
@@ -6,17 +7,17 @@ const notifications = [
         date:"Fri Nov 05 2021"
     },
     {
-        image:"/Images/unsplash_DuBNA1QMpPA.png",
+        image:"/images/unsplash_DuBNA1QMpPA.png",
         message:"Voluptatem temporibus ea voluptas quia porro id deserunt doloremque quos. Debitis et molestias quam dolorem voluptas id atque sint. Non....",
         date:"Fri Nov 05 2021"
     },
     {
-        image:"/Images/unsplash_LqKhnDzSF-8.png",
+        image:"/images/unsplash_ZXBPMnNVtlE.png",
         message:"Voluptatem temporibus ea voluptas quia porro id deserunt doloremque quos. Debitis et molestias quam dolorem voluptas id atque sint. Non....",
         date:"Fri Nov 05 2021"
     },
     {
-        image:"/Images/unsplash_ZXBPMnNVtlE.png",
+        image:"/images/unsplash_LqKhnDzSF-8.png",
         message:"Voluptatem temporibus ea voluptas quia porro id deserunt doloremque quos. Debitis et molestias quam dolorem voluptas id atque sint. Non....",
         date:"Fri Nov 05 2021"
     }
