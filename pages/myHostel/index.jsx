@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
-import MyHostelDashboard from '../components/page-components/MyHostelDashboard.jsx'
-import Layout from '../components/layout/index'
+import MyHostelDashboard from '../../components/page-components/MyHostelDashboard.jsx'
+import Layout from '../../components/layout/index'
 
 const MyHostel = () => (
   <div>

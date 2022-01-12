@@ -1,5 +1,5 @@
 
-import { CircleIntersect,Edit,MasterCardCircle } from "../SVGIcons";
+import { CircleIntersect,Edit,MasterCardCircle } from "./SVGIcons";
 
 const CardSection = () => {
     return(
