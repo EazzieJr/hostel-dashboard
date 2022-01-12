@@ -1,7 +1,7 @@
 import AcoountType from '../components/AccountType'
 import LayoutLogin from '../components/LayoutLogin'
 
-const Login = () => {
+const AccountType = () => {
   return (
     <LayoutLogin>
       <AcoountType />
@@ -9,4 +9,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default AccountType

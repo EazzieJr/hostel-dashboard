@@ -11,9 +11,9 @@ const GetStarted = () => {
           <div className="splash-container flex flex-col justify-center items-center text-center space-y-5 md:space-y-7 xl:space-y-10">
             <img className="w-24 xl:w-32" src="/svg/logo.svg" alt="" />
 
-            <p className="hostel text-4xl xl:text-5xl font-bold font-mono text-white text-center">
+            {/* <p className="hostel text-4xl xl:text-5xl font-bold font-mono text-white text-center">
               Hostels
-            </p>
+            </p> */}
 
             <Link
               href="/register"
