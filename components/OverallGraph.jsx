@@ -73,9 +73,9 @@ const OverallGraph = ({ points, name }) => {
             <div className="">
               <h5>{name}</h5>
             </div>
-            <div className="flex justify-between items-center border-2 py-2 px-3 rounded-xl gap-x-2">
+            <div className="flex justify-between items-center border-2 py-1 px-1 sm:py-2 sm:px-3 rounded-xl">
               <Calender />
-              <select name="year">
+              <select className='body2' name="year">
                 <option className="body2" value="Year">
                   Year
                 </option>
@@ -89,7 +89,7 @@ const OverallGraph = ({ points, name }) => {
                   2020
                 </option>
               </select>
-              <select>
+              <select className='body2'>
                 <option className="body2" value="Month">
                   Month
                 </option>

@@ -3,14 +3,17 @@ import Link from 'next/link'
 const accountTypes = [
   {
     name: 'Student',
+    link: 'home',
   },
 
   {
-    name: 'House Owner',
+    name: 'Client',
+    link: 'overview',
   },
 
   {
     name: 'Admin',
+    link: 'overview',
   },
 ]
 
@@ -20,7 +23,7 @@ const AccountType = () => {
       <section class="login flex justify-center bg-[#F8F9FA]">
         <div
           class="login-container w-screen lg:w-2/5 h-screen flex flex-col justify-center items-center bg-center bg-cover bg-no-repeat space-y-5"
-          style={{ 'backgroundImage': 'url(/images/Splash-bg.png)' }}
+          style={{ backgroundImage: 'url(/images/Splash-bg.png)' }}
         >
           <form
             class="w-80 lg:w-[400px] sm:w-96 lg:hidden px-8 py-8 bg-white rounded-2xl shadow-xl"
@@ -33,15 +36,19 @@ const AccountType = () => {
             <div class="account-types space-y-5 mt-7">
               {accountTypes.map(accountType => {
                 return (
-                  <div>
-                    <div class="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
-                      <p class="input-name text-sm text-[#52575C]">
-                        {accountType.name}
-                      </p>
+                  <Link href={`/${accountType.link}`}>
+                    <a>
+                      <div>
+                        <div class="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
+                          <p class="input-name text-sm text-[#52575C]">
+                            {accountType.name}
+                          </p>
 
-                      <input id="radio" type="radio" name="decision" />
-                    </div>
-                  </div>
+                          <input id="radio" type="radio" name="decision" />
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
                 )
               })}
             </div>

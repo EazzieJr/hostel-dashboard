@@ -32,7 +32,7 @@ const PaymentReceipt = () =>{
         }
     ]
     return(
-        <div className="lg:w-1/2 w-full bg-white rounded-xl px-4">
+        <div className="w-full md:w-[49%] bg-white rounded-xl px-2 lg:px-4">
             <p className="subtitle1 text-Neutral-black py-4">Receipts</p>
             {
                 receipts.map(receipt=>(
@@ -41,7 +41,7 @@ const PaymentReceipt = () =>{
                             <p className="subtitle2 text-gray-700">{receipt.date}</p>
                             <p className="small2 text-gray-400">{receipt.receiptNO}</p>
                         </div>
-                        <div className="flex justify-between items-center gap-x-6">
+                        <div className="flex justify-between items-center gap-x-4 lg:gap-x-6">
                             <p className="small2 text-gray-400">{receipt.amount}</p>
                             <a className="small3 text-primary-Default" href="">VIEW</a>
                         </div>

@@ -49,7 +49,7 @@ const NotificationDashboard = () => {
                                 <div className="flex items-center w-1/2 gap-x-3">
                                     <img className="pl-2" src={notification.image}/>
                                     <div>
-                                        <p className="subtitle1">Hostel Support</p>
+                                        <p className="subtitle1 ">Hostel Support</p>
                                         <div className="text-Neutral-gray">
                                             <p className="text-xs leading-normal h-8 overflow-hidden tracking-normal lg:h-fit">{notification.message}</p>
                                         </div>

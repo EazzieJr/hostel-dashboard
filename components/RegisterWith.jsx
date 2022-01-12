@@ -46,7 +46,7 @@ const LoginWith = () => {
             action=""
           >
             <h2 className="header font-sans font-bold text-[#2D3748] text-left text-xl lg:text-lg">
-              Login with
+              Register with
             </h2>
 
             <div className="social-medias-container flex space-x-5 mt-5">
@@ -60,6 +60,18 @@ const LoginWith = () => {
             <div className="details space-y-5">
               <div>
                 <p className="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1">
+                  Name
+                </p>
+
+                <input
+                  className="input w-full text-xs text-[#52575C] p-3 border rounded-2xl flex justify-between items-center"
+                  type="text"
+                  placeholder="Enter your Name"
+                />
+              </div>
+
+              <div>
+                <p className="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1">
                   Email
                 </p>
 
@@ -69,6 +81,7 @@ const LoginWith = () => {
                   placeholder="Enter your Email"
                 />
               </div>
+
               <div>
                 <p className="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1">
                   Password
@@ -104,9 +117,7 @@ const LoginWith = () => {
             <div className="already-have-an-account mt-5">
               <p className="text-xs text-[#A0AEC0]">
                 Don't have an account?
-                <Link
-                  href="/register"
-                >
+                <Link href="/register">
                   <a className="text-[#03A86B] font-medium">Register</a>
                 </Link>
               </p>
@@ -178,18 +189,14 @@ const LoginWith = () => {
             </div>
 
             <button className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
-              Login
+              Register
             </button>
 
             <div className="already-have-an-account mt-5">
               <p className="text-xs text-[#A0AEC0]">
-                Don't have an account?
-                <Link
-                  href="/register"
-                >
-                  <a className="text-[#03A86B] font-medium">
-                  Register
-                  </a>
+                Already have an account?
+                <Link href="/register">
+                  <a className="text-[#03A86B] font-medium">Login</a>
                 </Link>
               </p>
             </div>

@@ -14,17 +14,17 @@ const HostelRevenue = () => {
           <p className="w-10 h-10 rounded-full flex items-center justify-center bg-primary-Default">
             <ArrowLeft />
           </p>
-          <h3 className="text-primary-Default text-sm">Hostel Name</h3>
+          <h3 className="text-primary-Default text-sm md:text-md">Hostel Name</h3>
         </div>
         <div>
           <UserComponent />
         </div>
       </div>
-      <div className="flex justify-between mt-4">
-        <div className="p-4 w-3/5 bg-white rounded-xl">
+      <div className="flex flex-col gap-y-6 md:flex-row justify-between mt-4">
+        <div className="p-4 w-full md:w-3/5 bg-white rounded-xl">
           <OverallGraph points={points} name="Hostel Revenue " />
         </div>
-        <div className="w-2/6 bg-white px-2 py-4 rounded-xl">
+        <div className="md:w-2/6 w-full bg-white px-2 py-4 rounded-xl">
           <CircularProgressBar />
         </div>
       </div>

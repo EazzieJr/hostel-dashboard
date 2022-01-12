@@ -47,7 +47,7 @@ const Hostel = () => {
                   key={index}
                   className="flex flex-col gap-y-6 p-4 lg:min-w-[200px] w-[250px] sm:w-[230px] xl:min-w-[255px] xl:w-[255px] bg-white rounded-3xl"
                 >
-                  <div className="relative rounded-3xl overflow-hidden h-[150px]">
+                  <div classuName="relative rounded-3xl overflow-hidden h-[150px]">
                     <Image
                       src={img}
                       alt="hostelimage"

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const GetStarted = () => {
   return (
     <div>
@@ -13,12 +15,11 @@ const GetStarted = () => {
               Hostels
             </p>
 
-            <nuxt-link
-              to="/register"
-              className="text-sm text-[#03A86B] hover:text-white font-medium py-2.5 md:py-3 xl:py-4 px-7 md:px-10 xl:px-14 bg-white hover:bg-[#03A86B] transition duration-700 rounded-full"
+            <Link
+              href="/register"
             >
-              Get started
-            </nuxt-link>
+              <a className="text-sm text-[#03A86B] hover:text-white font-medium py-2.5 md:py-3 xl:py-4 px-7 md:px-10 xl:px-14 bg-white hover:bg-[#03A86B] transition duration-700 rounded-full">Get started</a>
+            </Link>
           </div>
         </section>
       </div>
