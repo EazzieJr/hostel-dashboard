@@ -116,10 +116,12 @@ const LoginWith = () => {
 
             <div className="already-have-an-account mt-5">
               <p className="text-xs text-[#A0AEC0]">
-              Already have an account?
+                Already have an account?
                 <Link href="/login">
-                  <a >
-                    <p className="cursor-pointer text-[#03A86B] font-medium">login</p>
+                  <a>
+                    <p className="cursor-pointer text-[#03A86B] font-medium">
+                      login
+                    </p>
                   </a>
                 </Link>
               </p>
@@ -141,7 +143,7 @@ const LoginWith = () => {
             action=""
           >
             <h2 className="header font-sans font-bold text-[#2D3748] text-left text-xl lg:text-lg">
-              Login with
+              Register with
             </h2>
 
             <div className="social-medias-container flex space-x-5 mt-5">
@@ -199,11 +201,15 @@ const LoginWith = () => {
             <div className="already-have-an-account mt-5">
               <p className="text-xs text-[#A0AEC0]">
                 Already have an account?
-                <Link href="/login">
-                  <a >
-                    <p className="cursor-pointer text-[#03A86B] font-medium">login</p>
-                  </a>
-                </Link>
+                <span>
+                  <Link href="/login">
+                    <a>
+                      <p className="cursor-pointer text-[#03A86B] font-medium">
+                        login
+                      </p>
+                    </a>
+                  </Link>
+                </span>
               </p>
             </div>
           </form>

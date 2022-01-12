@@ -33,19 +33,21 @@ const AccountTypeComp = () => {
             <div className="account-types space-y-5 mt-7">
               {accountTypes.map(accountType => {
                 return (
-                  <Link href="/login">
-                    <a>
-                      <div>
-                        <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
-                          <p className="input-name text-sm text-[#52575C]">
-                            {accountType.name}
-                          </p>
+                  <div>
+                    <Link href="/register">
+                      <a className="cursor-pointer">
+                        <div>
+                          <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
+                            <p className="input-name text-sm text-[#52575C]">
+                              {accountType.name}
+                            </p>
 
-                          <input id="radio" type="radio" name="decision" />
+                            <input id="radio" type="radio" name="decision" />
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </Link>
+                      </a>
+                    </Link>
+                  </div>
                 )
               })}
             </div>
@@ -82,20 +84,26 @@ const AccountTypeComp = () => {
               {accountTypes.map(accountType => {
                 return (
                   <div>
-                    <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
-                      <p className="input-name text-sm text-[#52575C]">
-                        {accountType.name}
-                      </p>
+                    <Link href="/register">
+                      <a className="cursor-pointer">
+                        <div>
+                          <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
+                            <p className="input-name text-sm text-[#52575C]">
+                              {accountType.name}
+                            </p>
 
-                      <input id="radio" type="radio" name="decision" />
-                    </div>
+                            <input id="radio" type="radio" name="decision" />
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
                 )
               })}
             </div>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0]">
+              <p className="text-xs text-[#A0AEC0] flex space-x-4">
                 Already have an account?
                 <Link href="/login">
                   <a>
