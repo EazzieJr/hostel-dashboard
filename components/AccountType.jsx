@@ -1,3 +1,4 @@
+import {LogoWhite} from '../components/SVGIcons'
 import Link from 'next/link'
 
 const accountTypes = [
@@ -63,11 +64,7 @@ const AccountTypeComp = () => {
           </form>
 
           <div className="splash-container hidden lg:flex flex-col justify-center items-center text-center space-y-5 md:space-y-7">
-            <img className="w-24 xl:w-32" src="/svg/logo.svg" alt="" />
-
-            <p className="hostel text-4xl xl:text-5xl font-bold font-mono text-white text-center">
-              Hostels
-            </p>
+            <LogoWhite />
           </div>
         </div>
 
