@@ -1,5 +1,7 @@
-import {LogoWhite} from '../components/SVGIcons'
+import { LogoWhite } from '../components/SVGIcons'
 import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { setRole } from '../features/userSlice'
 
 const accountTypes = [
   {
@@ -7,15 +9,13 @@ const accountTypes = [
   },
 
   {
-    name: 'Client',
-  },
-
-  {
-    name: 'Admin',
+    name: 'House Owner',
   },
 ]
 
 const AccountTypeComp = () => {
+  const dispatch = useDispatch()
+
   return (
     <div>
       <section className="login flex justify-center bg-[#F8F9FA]">
@@ -36,15 +36,18 @@ const AccountTypeComp = () => {
                 return (
                   <div>
                     <Link href="/register">
-                      <a className="cursor-pointer">
-                        <div>
-                          <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
-                            <p className="input-name text-sm text-[#52575C]">
-                              {accountType.name}
-                            </p>
+                      <a
+                        className="cursor-pointer"
+                        onClick={() => {
+                          dispatch(setRole(accountType.name))
+                        }}
+                      >
+                        <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
+                          <p className="input-name text-sm text-[#52575C]">
+                            {accountType.name}
+                          </p>
 
-                            <input id="radio" type="radio" name="decision" />
-                          </div>
+                          <input id="radio" type="radio" name="decision" />
                         </div>
                       </a>
                     </Link>
@@ -54,10 +57,12 @@ const AccountTypeComp = () => {
             </div>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0]">
-                Already have an account?
+              <p className="text-xs text-[#A0AEC0] flex space-x-1">
+                <span>Already have an account?</span>
                 <Link href="/login">
-                  <a className="text-[#03A86B] font-medium">Login</a>
+                  <a>
+                    <p className="text-[#03A86B] font-medium">Login</p>
+                  </a>
                 </Link>
               </p>
             </div>
@@ -82,15 +87,18 @@ const AccountTypeComp = () => {
                 return (
                   <div>
                     <Link href="/register">
-                      <a className="cursor-pointer">
-                        <div>
-                          <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
-                            <p className="input-name text-sm text-[#52575C]">
-                              {accountType.name}
-                            </p>
+                      <a
+                        className="cursor-pointer"
+                        onClick={() => {
+                          dispatch(setRole(accountType.name))
+                        }}
+                      >
+                        <div className="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center">
+                          <p className="input-name text-sm text-[#52575C]">
+                            {accountType.name}
+                          </p>
 
-                            <input id="radio" type="radio" name="decision" />
-                          </div>
+                          <input id="radio" type="radio" name="decision" />
                         </div>
                       </a>
                     </Link>
@@ -100,8 +108,8 @@ const AccountTypeComp = () => {
             </div>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0] flex space-x-4">
-                Already have an account?
+              <p className="text-xs text-[#A0AEC0] flex space-x-1">
+                <span>Already have an account?</span>
                 <Link href="/login">
                   <a>
                     <p className="text-[#03A86B] font-medium">Login</p>

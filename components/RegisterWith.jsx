@@ -1,20 +1,7 @@
 import { useState } from 'react'
 import { Apple, Facebook, LogoWhite, Google } from './SVGIcons'
 import Link from 'next/link'
-
-const inputs = [
-  {
-    name: 'Email',
-    placeHolder: 'Your email address',
-    type: 'email',
-  },
-
-  {
-    name: 'Password',
-    placeHolder: 'Your password',
-    type: 'password',
-  },
-]
+import { useSelector } from 'react-redux'
 
 const LoginWith = () => {
   const [remembered, setRemembered] = useState(false)
@@ -34,6 +21,8 @@ const LoginWith = () => {
     }
   }
 
+  const user = useSelector(state => state.user)
+
   return (
     <div>
       <section className="login flex justify-center bg-[#F8F9FA]">
@@ -50,7 +39,7 @@ const LoginWith = () => {
             </h2>
 
             <div className="social-medias-container flex space-x-5 mt-5">
-            <button className="social-media p-4 border rounded-xl">
+              <button className="social-media p-4 border rounded-xl">
                 <Apple />
               </button>
 
@@ -116,22 +105,24 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href="/home">
+            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Login
               </a>
             </Link>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0]">
-                Already have an account?
-                <Link href="/login">
-                  <a>
-                    <p className="cursor-pointer text-[#03A86B] font-medium">
-                      login
-                    </p>
-                  </a>
-                </Link>
+              <p className="text-xs text-[#A0AEC0] flex space-x-1">
+                <span>Already have an account?</span>
+                <span>
+                  <Link href="/login">
+                    <a>
+                      <p className="cursor-pointer text-[#03A86B] font-medium">
+                        login
+                      </p>
+                    </a>
+                  </Link>
+                </span>
               </p>
             </div>
           </form>
@@ -151,7 +142,7 @@ const LoginWith = () => {
             </h2>
 
             <div className="social-medias-container flex space-x-5 mt-5">
-            <button className="social-media p-4 border rounded-xl">
+              <button className="social-media p-4 border rounded-xl">
                 <Apple />
               </button>
 
@@ -204,7 +195,7 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href="/home">
+            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Register
               </a>

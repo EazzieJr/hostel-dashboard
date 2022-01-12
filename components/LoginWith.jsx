@@ -1,23 +1,14 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Apple, Facebook, LogoWhite, Google } from './SVGIcons'
 import Link from 'next/link'
 
-const inputs = [
-  {
-    name: 'Email',
-    placeHolder: 'Your email address',
-    type: 'email',
-  },
-
-  {
-    name: 'Password',
-    placeHolder: 'Your password',
-    type: 'password',
-  },
-]
-
 const LoginWith = () => {
   const [remembered, setRemembered] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const user = useSelector(state => state.user)
 
   const toggle = () => {
     const control = document.querySelector('.control, .control-big')
@@ -103,7 +94,7 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href="/home">
+            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Login
               </a>
@@ -191,7 +182,7 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href="/home">
+            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Login
               </a>

@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../features/userSlice'
 
 import {
   Logo,
@@ -15,20 +18,24 @@ import {
   Logout,
 } from '../SVGIcons'
 
-const user = {
-  name: 'Joey',
-  image: '/images/userPic.png',
-  role: 'Client',
-}
+// const user = {
+//   name: 'Joey',
+//   image: '/images/userPic.png',
+//   role: 'House Owner',
+// }
 
 const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
   const { asPath } = useRouter()
 
-  const NavItem = ({ label, logo, link }) => {
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.user)
+
+  const NavItem = ({ label, logo, link, onClick }) => {
     return (
       <li>
         <Link href={link}>
           <a
+            onClick={onClick}
             className={`${
               asPath === link
                 ? 'bg-primary-Lightest text-primary-Dark'
@@ -62,7 +69,7 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
       >
         {/* Logo */}
         <div className="px-8">
-          <Link href="/">
+          <Link href={user.role === 'Student' ? '/home' : '/overview'}>
             <a>
               <Logo />
             </a>
@@ -72,13 +79,13 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
         {/* Nav list */}
         <ul className="mt-14">
           <div className="px-6">
-            {user.role === 'Client' && (
+            {user.role === 'House Owner' && (
               <NavItem label="Overview" logo={<Overview />} link="/overview" />
             )}
 
             {/* home */}
             {user.role === 'Student' && (
-              <NavItem label="Home" logo={<Home />} link="/" />
+              <NavItem label="Home" logo={<Home />} link="/home" />
             )}
 
             {/* favorites */}
@@ -91,7 +98,7 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
             )}
 
             {/* my hostel */}
-            {user.role === 'Client' && (
+            {user.role === 'House Owner' && (
               <NavItem
                 label="My Hostel"
                 logo={<Favorites />}
@@ -111,7 +118,7 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
               <NavItem label="Payments" logo={<Payment />} link="/payments" />
             )}
 
-            {user.role === 'Client' && (
+            {user.role === 'House Owner' && (
               <NavItem label="Receipts" logo={<Receipts />} link="/receipts" />
             )}
           </div>
@@ -120,8 +127,15 @@ const SideBar = ({ sideBarOpened, setSideBarOpened }) => {
           <div className="w-full bg-Neutral-Divider h-px my-10"></div>
 
           <div className="px-6">
-            <NavItem label="Help" logo={<Help />} link="/help" />
-            <NavItem label="Logout" logo={<Logout />} link="/logout" />
+            <NavItem label="Help" logo={<Help />} link="" />
+            <NavItem
+              label="Logout"
+              logo={<Logout />}
+              link="/"
+              onClick={() => {
+                dispatch(logout())
+              }}
+            />
           </div>
         </ul>
       </nav>
