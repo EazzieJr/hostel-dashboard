@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 import { Calender } from './SVGIcons'
 
-const OverallGraph = () => {
+const OverallGraph = ({ points, name }) => {
   const [state] = useState({
     options: {
       chart: {
@@ -22,8 +22,8 @@ const OverallGraph = () => {
       },
       series: [
         {
-          name: 'Overall', 
-          data: [900, 800, 600, 200, 500, 400, 700, 300, 900, 500, 1200, 700],
+          name: 'Overall',
+          data: points,
         },
       ],
       fill: {
@@ -54,14 +54,14 @@ const OverallGraph = () => {
           style: {
             fontWeight: 800,
             fontSize: '14px',
-          }
-        }
+          },
+        },
       },
       yaxis: {
         // min: 7,
         tickAmount: 5,
         // max: 40,
-      }
+      },
     },
   })
 
@@ -71,7 +71,7 @@ const OverallGraph = () => {
         <div className="mixed-chart">
           <div className="flex items-center justify-between py-5 px-4">
             <div className="">
-              <h5>Overall Revenue</h5>
+              <h5>{name}</h5>
             </div>
             <div className="flex justify-between items-center border-2 py-2 px-3 rounded-xl gap-x-2">
               <Calender />

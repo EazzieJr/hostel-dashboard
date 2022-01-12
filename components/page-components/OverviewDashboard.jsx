@@ -3,6 +3,8 @@ import HostelDetailsComponent from '../HostelDetailsComponent'
 import OverallGraph from '../OverallGraph.jsx'
 import { RecentCircle } from '../SVGIcons'
 
+const points = [900, 800, 600, 200, 500, 400, 700, 300, 900, 500, 1200, 700]
+
 const HostelDetails = [
   {
     name: 'Hostelname1',
@@ -45,7 +47,7 @@ const OverviewComponent = () => {
 
       <div className="flex py-4 justify-between">
         <div className="w-4/6 px-2 bg-white rounded-xl">
-          <OverallGraph />
+          <OverallGraph points={points} name="Overall Revenue" />
         </div>
 
         <div className="w-3/10 bg-white rounded-xl px-4 py-2 ">
