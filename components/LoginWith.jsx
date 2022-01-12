@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Apple, Facebook, Google } from './SVGIcons'
+import Link from 'next/link'
 
 const inputs = [
   {
