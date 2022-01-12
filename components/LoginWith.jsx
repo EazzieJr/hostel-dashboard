@@ -102,12 +102,12 @@ const LoginWith = () => {
             </Link>
 
             <div className="already-have-an-account mt-5">
-              <p className="text-xs text-[#A0AEC0]">
+            <p className="text-xs text-[#A0AEC0]">
                 Don't have an account?
-                <Link
-                  href="/register"
-                >
-                  <a className="text-[#03A86B] font-medium">Register</a>
+                <Link href="/register">
+                  <a >
+                    <p className="cursor-pointer text-[#03A86B] font-medium">Register</p>
+                  </a>
                 </Link>
               </p>
             </div>
@@ -177,18 +177,18 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <button className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
-              Login
-            </button>
+            <Link href="/home">
+              <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
+                Login
+              </a>
+            </Link>
 
             <div className="already-have-an-account mt-5">
               <p className="text-xs text-[#A0AEC0]">
                 Don't have an account?
-                <Link
-                  href="/register"
-                >
-                  <a className="text-[#03A86B] font-medium">
-                  Register
+                <Link href="/register">
+                  <a >
+                    <p className="cursor-pointer text-[#03A86B] font-medium">Register</p>
                   </a>
                 </Link>
               </p>
