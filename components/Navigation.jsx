@@ -4,7 +4,7 @@ import { Logo } from './SVGIcons'
 const Navigation = () => {
   return (
     <div>
-      <nav className="w-full top-0 left-0 lg:absolute 2xl:container 2xl:mx-auto">
+      <nav className="w-full top-0 left-0 lg:absolute">
         <div className="nav-container py-6 xl:py-8 px-5 xl:px-14 flex justify-between items-center">
           <div className="left-container">
             <Link href="/">

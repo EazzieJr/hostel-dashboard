@@ -105,7 +105,7 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
+            <Link href={user.role === 'Student' ? '/home' : '/registerClients'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Login
               </a>
@@ -195,7 +195,7 @@ const LoginWith = () => {
               </p>
             </div>
 
-            <Link href={user.role === 'Student' ? '/home' : '/overview'}>
+            <Link href={user.role === 'Student' ? '/home' : '/registerClients'}>
               <a className="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
                 Register
               </a>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Naira, Pen } from '../components/SVGIcons'
 
 import LayoutLogin from '../components/LayoutLogin'
 import Navigation from '../components/Navigation'
@@ -33,7 +34,7 @@ const HostelAmount = () => {
               </h2>
 
               <div className="pricing w-full p-3 mt-5 flex justify-between items-center border rounded-2xl">
-                <img src="/svg/naira.svg" alt="" />
+                <Naira />
 
                 <input
                   className="input w-48 px-3 text-xs text-[#52575C] flex justify-between items-center"
@@ -41,7 +42,7 @@ const HostelAmount = () => {
                   placeholder="130,000"
                 />
 
-                <img src="/svg/pen.svg" alt="" />
+                <Pen />
               </div>
 
               <div className="terms mt-7">
@@ -72,7 +73,7 @@ const HostelAmount = () => {
               </h2>
 
               <div className="pricing w-full p-3 mt-5 flex justify-between items-center border rounded-2xl">
-                <img src="/svg/naira.svg" alt="" />
+                <Naira />
 
                 <input
                   className="input w-48 px-3 text-xs text-[#52575C] flex justify-between items-center"
@@ -80,7 +81,7 @@ const HostelAmount = () => {
                   placeholder="130,000"
                 />
 
-                <img src="/svg/pen.svg" alt="" />
+                <Pen />
               </div>
 
               <div className="terms mt-7">
