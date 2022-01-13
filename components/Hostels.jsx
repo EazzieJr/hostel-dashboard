@@ -70,7 +70,6 @@ const Hostel = () => {
                   <div className="flex justify-start items-center gap-x-2.5">
                     <Map />
                     <p className="body1 text-Neutral-gray">{location}</p>
-                    <p className="small1 text-primary-Default">Show Map</p>
                   </div>
                   <div>
                     <p className="subtitle1 text-Neutral-black">N{price}</p>

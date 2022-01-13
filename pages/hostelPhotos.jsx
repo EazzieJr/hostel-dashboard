@@ -1,8 +1,17 @@
+import React, { useState } from 'react'
+import { FileUploader } from 'react-drag-drop-files'
+
 import Navigation from '../components/Navigation'
 import LayoutLogin from '../components/LayoutLogin'
 import Link from 'next/link'
 
+const fileTypes = ['JPG', 'PNG', 'GIF']
+
 const hostelPhotos = () => {
+  const [file, setFile] = useState(null)
+  const handleChange = file => {
+    setFile(file)
+  }
   return (
     <LayoutLogin>
       <div>
@@ -30,13 +39,20 @@ const hostelPhotos = () => {
                 <h2 class="header font-sans font-bold text-[#2D3748] text-left text-xl lg:text-lg">
                   Photos
                 </h2>
-
-                <div class="div w-full h-40 bg-gray-300 mt-7 rounded-2xl"></div>
+                <div class="div w-full h-40 border mt-7 rounded-2xl">
+                  <FileUploader
+                    handleChange={handleChange}
+                    name="file"
+                    types={fileTypes}
+                    label="Drag and drop your files here"
+                    hoverTitle="Drop your files here"
+                    classes="file-drop"
+                  />
+                </div>
 
                 <div class="terms mt-7">
                   <p class="text-xs text-[#A0AEC0] font-bold">or</p>
                 </div>
-
                 <div class="continue mt-7">
                   <Link href="/hostelPhotos">
                     <a class="px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
@@ -44,14 +60,12 @@ const hostelPhotos = () => {
                     </a>
                   </Link>
                 </div>
-
                 <div class="terms mt-7">
                   <p class="text-xs text-[#A0AEC0] font-bold">
                     You can just use a smartphone or a digital camera here to
                     get the job done.
                   </p>
                 </div>
-
                 <div class="continue mt-7">
                   <Link href="/hostelVerification">
                     <a class="px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
@@ -73,7 +87,16 @@ const hostelPhotos = () => {
                   Photos
                 </h2>
 
-                <div class="div w-full h-40 bg-gray-300 mt-7 rounded-2xl"></div>
+                <div class="div w-full h-40 mt-7 rounded-2xl">
+                  <FileUploader
+                    handleChange={handleChange}
+                    name="file"
+                    types={fileTypes}
+                    label="Drag and drop your files here"
+                    hoverTitle="Drop your files here"
+                    classes="file-drop"
+                  />
+                </div>
 
                 <div class="terms mt-7">
                   <p class="text-xs text-[#A0AEC0] font-bold">or</p>
