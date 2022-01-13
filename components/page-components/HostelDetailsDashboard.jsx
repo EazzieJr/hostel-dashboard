@@ -2,19 +2,26 @@ import OverallGraph from '../OverallGraph.jsx'
 
 import CircularProgressBar from '../CircularProgressBar'
 import UserComponent from '../UserComponent'
+import { useRouter } from 'next/router'
 import { ArrowLeft, Calender } from '../SVGIcons'
+import Link from 'next/link'
 
 const points = [900, 800, 600, 200, 500, 400, 700, 300, 900, 500, 1200, 700]
 
 const HostelRevenue = () => {
+  const { query } = useRouter()
   return (
     <div>
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between gap-x-4">
-          <p className="w-10 h-10 rounded-full flex items-center justify-center bg-primary-Default">
-            <ArrowLeft />
-          </p>
-          <h3 className="text-primary-Default text-sm md:text-md">Hostel Name</h3>
+          <Link href="/myHostel">
+            <a className="w-10 h-10 rounded-full flex items-center justify-center bg-primary-Default">
+              <ArrowLeft />
+            </a>
+          </Link>
+          <h3 className="text-primary-Default text-sm md:text-md">
+            {query.name}
+          </h3>
         </div>
         <div>
           <UserComponent />

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialStateValue = {
   name: '',
   email: '',
-  role: '',
+  role: 'Student',
   isLoggedIn: false,
 }
 
